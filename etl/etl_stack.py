@@ -31,6 +31,7 @@ class EtlStack(Stack):
             environment={
                 'USER_VALID_BUCKET': user_valid_bucket.bucket_name
             }
+            # TODO: Write a trigger here
         )
 
         # Permissions for Lambda

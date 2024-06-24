@@ -41,7 +41,7 @@ class EtlStack(Stack):
             environment={
                 'USER_VALID_BUCKET': user_valid_bucket.bucket_name
             }
-            # TODO: Write a trigger here
+            role=lambda_role
         )
 
         # Lambda function for validate_user_data
@@ -52,7 +52,7 @@ class EtlStack(Stack):
             environment={
                 'USER_FINAL_BUCKET': user_final_bucket.bucket_name
             }
-            # TODO: Write a trigger here
+            role=lambda_role
         )
 
         # Step Function Construct
